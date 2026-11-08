@@ -42,7 +42,7 @@ Go to **GitHub → Settings → Developer settings → GitHub Apps → New GitHu
 
 | Field | Value |
 |---|---|
-| GitHub App name | `kummep-portfolio-admin` (any unique name) |
+| GitHub App name | `kummep-jr-admin` |
 | Homepage URL | your site address, e.g. `https://kummep-jnr.vercel.app` |
 | Callback URL | `https://kummep-jr.vercel.app/api/keystatic/github/oauth/callback` |
 | Expire user authorization tokens | ✅ leave ticked |
@@ -64,14 +64,15 @@ If you also add your own domain later, add a second Callback URL for it in the a
 
 ### 4. Add the keys to Vercel
 
-In Vercel → your project → **Settings → Environment Variables**, add these four, ticking all environments:
+In Vercel → your project → **Settings → Environment Variables**, add these three, ticking all environments:
 
 | Name | Value |
 |---|---|
 | `KEYSTATIC_GITHUB_CLIENT_ID` | the Client ID |
 | `KEYSTATIC_GITHUB_CLIENT_SECRET` | the client secret |
 | `KEYSTATIC_SECRET` | a long random string, e.g. from <https://generate-secret.vercel.app/64> |
-| `NEXT_PUBLIC_KEYSTATIC_GITHUB_APP_SLUG` | the app slug |
+
+The app's public name (slug) is already set in `next.config.ts` as `kummep-jr-admin`. If you ever create the app under a different name, change it there.
 
 Then go to **Deployments → ⋯ → Redeploy**.
 
