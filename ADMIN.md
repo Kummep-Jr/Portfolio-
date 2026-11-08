@@ -44,7 +44,7 @@ Go to **GitHub → Settings → Developer settings → GitHub Apps → New GitHu
 |---|---|
 | GitHub App name | `kummep-portfolio-admin` (any unique name) |
 | Homepage URL | your site address, e.g. `https://kummep-jnr.vercel.app` |
-| Callback URL | `https://YOUR-SITE/api/keystatic/github/oauth/callback` |
+| Callback URL | `https://kummep-jr.vercel.app/api/keystatic/github/oauth/callback` |
 | Expire user authorization tokens | ✅ leave ticked |
 | Request user authorization (OAuth) during installation | ✅ tick |
 | Webhook → Active | ❌ untick |
@@ -77,7 +77,7 @@ Then go to **Deployments → ⋯ → Redeploy**.
 
 ### 5. Sign in
 
-Open `https://YOUR-SITE/keystatic` and click **Sign in with GitHub**. Approve the request, and you're in.
+Open `https://kummep-jr.vercel.app/keystatic` and click **Sign in with GitHub**. Approve the request, and you're in.
 
 Also open the admin, go to **Profile & site settings → Website address**, set your real address, and save. Google and link previews use it.
 
