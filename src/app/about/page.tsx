@@ -35,7 +35,7 @@ export default function AboutPage() {
         <div className="max-w-2xl space-y-8">
           <div className="space-y-4">
             <h1 className="text-3xl font-bold tracking-tight sm:text-4xl">
-              {aboutConfig.headline[0]}
+              {aboutConfig.headline[0]}{" "}
               <br />
               {aboutConfig.headline[1]}
             </h1>
@@ -135,7 +135,7 @@ export default function AboutPage() {
         >
           <h2 className="text-xl font-bold tracking-tight">Let&apos;s connect</h2>
           <p className="text-sm leading-relaxed text-secondary sm:text-base">
-            Whether you want to collaborate, talk about AI, or just say hi — I&apos;d love to
+            Need a web app, a map, or a geologist on your team — or just want to say hi? I&apos;d love to
             hear from you.
           </p>
           <div className="flex flex-wrap gap-2 pt-1">

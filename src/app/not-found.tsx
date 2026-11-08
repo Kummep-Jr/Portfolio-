@@ -2,6 +2,10 @@ import Link from "next/link";
 import { Container } from "@/components/container";
 import { Button } from "@/components/ui/button";
 
+export const metadata = {
+  title: "Page not found | Kummep Jnr",
+};
+
 export default function NotFound() {
   return (
     <div className="flex min-h-[60vh] items-center pb-16 pt-20">

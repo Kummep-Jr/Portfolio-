@@ -13,7 +13,6 @@ export type Project = {
   gradient: string;
 };
 
-// TODO: refine descriptions/dates and add screenshots under public/assets/projects/
 export const projects: Project[] = [
   {
     slug: "de-saint",
@@ -47,6 +46,7 @@ export const projects: Project[] = [
       "B.Sc. project: independent 1:12,500 geological map of 14 km² of Basement Complex terrain near Pankshin, Plateau State, with structural analysis, thin-section petrography, and pegmatite (lithium, beryl, gemstone) targets.",
     tech: ["QGIS", "ArcGIS Pro", "Surfer", "Field mapping"],
     featured: true,
+    cover: "/assets/projects/wulmi-geological-mapping.jpg",
     gradient: "from-stone-500/25 via-amber-500/15 to-emerald-500/25",
   },
   {
@@ -54,9 +54,10 @@ export const projects: Project[] = [
     title: "Portfolio",
     date: "11.2026",
     description:
-      "This site — a personal portfolio built with Next.js, TypeScript, Tailwind CSS, and MDX.",
+      "This site — my portfolio with a CV hub of six tailored CVs, built with Next.js, TypeScript, Tailwind CSS and MDX.",
     tech: ["TypeScript", "Next.js", "Tailwind CSS"],
     href: "https://github.com/Kummep-jnr/Portfolio-",
+    cover: "/assets/projects/portfolio.jpg",
     gradient: "from-amber-500/25 via-orange-500/15 to-stone-500/25",
   },
   {

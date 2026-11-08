@@ -2,7 +2,6 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { GithubLogo, GlobeSimple } from "@phosphor-icons/react";
 import { Container } from "@/components/container";
 import { achievements, type Achievement } from "@/config/achievements";
 import { experience, type ExperienceItem } from "@/config/experience";

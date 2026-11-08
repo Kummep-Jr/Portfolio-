@@ -7,7 +7,7 @@ export const siteConfig = {
   url: "https://kummep-jnr.vercel.app",
   githubUsername: "SmartDev911",
   twitterHandle: "@Smart_dev001",
-  ogImage: "/assets/og-image.png",
+  ogImage: "/assets/og-image.jpg",
   ogImageWidth: 1200,
   ogImageHeight: 630,
   copyright: "All rights reserved.",

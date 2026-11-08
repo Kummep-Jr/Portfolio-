@@ -21,7 +21,7 @@ export default async function BlogPage() {
       <Container>
         <h1 className="text-3xl font-bold tracking-tight">Blog</h1>
         <p className="mt-3 text-secondary">
-          Notes on building, grief, growth, and lessons from the journey.
+          Notes on software, geology, GIS and lessons from the journey.
         </p>
       </Container>
 

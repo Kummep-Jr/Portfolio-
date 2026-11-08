@@ -24,10 +24,6 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
-  icons: {
-    icon: "/assets/avatar-smile.png",
-    apple: "/assets/avatar-smile.png",
-  },
 };
 
 export default function RootLayout({

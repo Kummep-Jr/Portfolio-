@@ -1,6 +1,6 @@
 # Kummep Jnr — Portfolio
 
-Personal portfolio of **Kummep Jnr**, full-stack developer and geologist. Built with Next.js 15, TypeScript, Tailwind CSS v4, and MDX.
+Personal portfolio of **Kummep Jnr** (Kummep Ringpon Timyil) — full-stack developer, IT technician and University of Jos geology graduate. Built with Next.js 15, TypeScript, Tailwind CSS v4, and MDX.
 
 **GitHub:** [@SmartDev911](https://github.com/SmartDev911)
 
@@ -39,16 +39,17 @@ Almost everything lives in **`src/config/`**. Search for `TODO` to find the spot
 | `about.ts` | About page story, traits, principles |
 | `projects.ts` | Projects (GitHub link, live site, tech, optional cover) |
 | `experience.ts` | Work history — the Work page appears once this has entries |
-| `education.ts` | Education and skills |
+| `education.ts` | Education, skill groups and memberships (shown on the CV page) |
 | `achievements.ts` | Awards and milestones — page appears once this has entries |
-| `resume.ts` | Resume PDF links — page appears once `viewUrl` is set |
+| `resume.ts` | The six CV variants on the CV page (files live in `public/cv/`) |
 | `books.ts` / `favourites.ts` | Books, movies, series — pages appear once filled |
 | `tech-stack.ts` | Home page tech icons ([simpleicons.org](https://simpleicons.org) slugs) |
 | `quote.ts` | Quote card and rotating titles under your name |
 
+- **CVs:** to update a CV, replace the `.docx` in `public/cv/` and regenerate the PDF (e.g. `soffice --headless --convert-to pdf --outdir public/cv public/cv/<file>.docx`).
 - **Blog posts:** add `.mdx` files to `content/blog/`, then set `hasBlog = true` in `src/config/navigation.ts`.
 - **Project write-ups:** add `.mdx` files to `content/projects/` (optional detail pages).
-- **Images:** put files in `public/assets/` and reference them as `/assets/your-image.png`. Replace `public/assets/avatar.png` with your photo whenever you like.
+- **Images:** put files in `public/assets/` and reference them as `/assets/your-image.png`. Avatar: `public/assets/avatar.png`; banner: `public/assets/header.jpg`; social preview: `public/assets/og-image.jpg`.
 
 ---
 
