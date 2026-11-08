@@ -15,7 +15,6 @@ import {
 import { ProfileAvatar } from "@/components/profile-avatar";
 import { Container } from "@/components/container";
 import { RotatingTitle } from "@/components/landing/rotating-title";
-import { SpotifyLastPlayed } from "@/components/landing/spotify-last-played";
 import { TimezoneWidget } from "@/components/landing/timezone-widget";
 import { Tooltip, TooltipContent, TooltipTrigger } from "@/components/ui/tooltip";
 import { heroConfig, socialLinks } from "@/config/hero";
@@ -36,8 +35,8 @@ export function Hero() {
         <div className="corner-frame relative h-[calc(var(--grid-cell-size)*4)] overflow-visible">
           <div className="relative size-full overflow-hidden border border-foreground/15">
           <Image
-            src="/assets/priyanshu-header.jpeg"
-            alt="Priyanshu header"
+            src="/assets/header.png"
+            alt="Layered rock strata banner"
             fill
             priority
             sizes="(max-width: 640px) 100vw, 720px"
@@ -66,6 +65,7 @@ export function Hero() {
             </h1>
             <RotatingTitle />
             <div className="mt-3 flex flex-wrap items-center gap-2">
+              {heroConfig.calendarUrl && (
               <Link
                 href={heroConfig.calendarUrl}
                 target="_blank"
@@ -75,6 +75,7 @@ export function Hero() {
                 <CalendarBlank className="size-3.5 sm:size-4" weight="bold" />
                 Book a call
               </Link>
+              )}
               <Link
                 href={`mailto:${heroConfig.email}`}
                 className="inline-flex items-center gap-1.5 rounded-full border border-border bg-card px-3.5 py-1.5 text-xs font-medium text-foreground transition-colors hover:bg-muted sm:text-sm"
@@ -111,10 +112,6 @@ export function Hero() {
               </Tooltip>
             );
           })}
-        </div>
-
-        <div className="max-w-full pt-1">
-          <SpotifyLastPlayed />
         </div>
       </div>
     </Container>

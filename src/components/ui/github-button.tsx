@@ -32,7 +32,7 @@ interface GitHubButtonProps {
 }
 
 export const GitHubButton: React.FC<GitHubButtonProps> = ({
-  href = 'https://github.com/GitHpriyanshu23/priyanshu-portfolio',
+  href = 'https://github.com/Kummep-jnr/Portfolio-',
   className,
 }) => {
   const [isHovered, setIsHovered] = useState(false);
@@ -46,7 +46,7 @@ export const GitHubButton: React.FC<GitHubButtonProps> = ({
         className="group relative inline-flex items-center justify-center w-36 h-10 select-none cursor-pointer"
         onMouseEnter={() => setIsHovered(true)}
         onMouseLeave={() => setIsHovered(false)}
-        aria-label="Star Priyanshu's portfolio on GitHub"
+        aria-label="Star this portfolio on GitHub"
       >
         {/* Ambient colored backdrop glow (no grey box/corners) */}
         <div className="absolute -inset-1 rounded-2xl bg-gradient-to-r from-blue-600 via-indigo-500 to-purple-600 opacity-40 blur-md transition-all duration-500 group-hover:opacity-75 group-hover:blur-lg pointer-events-none" />

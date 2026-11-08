@@ -71,7 +71,7 @@ export function SiteHeader() {
           href="/"
           className="font-mono text-lg font-bold tracking-tight text-foreground hover:opacity-80"
         >
-          PU
+          KJ
         </Link>
 
         <div className="flex items-center gap-3 sm:gap-5">
@@ -90,7 +90,7 @@ export function SiteHeader() {
                 {item.label}
               </Link>
             ))}
-            <MoreMenu />
+            {moreNav.length > 0 && <MoreMenu />}
           </nav>
 
           <button

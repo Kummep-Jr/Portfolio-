@@ -44,10 +44,7 @@ const techIcons: Record<string, string> = {
   TypeScript: "typescript",
 };
 
-const achievementTech: Record<string, string[]> = {
-  "sih-2025": ["Python", "React", "TypeScript", "Machine Learning"],
-  "sih-2024": ["Next.js", "React", "TypeScript", "PostgreSQL"],
-};
+const achievementTech: Record<string, string[]> = {};
 
 function experienceToFeatured(item: ExperienceItem): FeaturedItem {
   return {
@@ -56,7 +53,7 @@ function experienceToFeatured(item: ExperienceItem): FeaturedItem {
     subtitle: item.role,
     period: item.periodLong,
     location: item.locationLong.trim(),
-    image: "/assets/Valency-Energy-Logo.jpeg",
+    image: item.logo ?? "/assets/avatar.png",
     details: item.details ?? [],
     tech: item.tech ?? [],
     href: "/work",
@@ -70,7 +67,7 @@ function achievementToFeatured(item: Achievement): FeaturedItem {
     subtitle: item.title,
     period: item.periodLong,
     location: "Achievement",
-    image: item.image ?? "/assets/og-image.jpg",
+    image: item.image ?? "/assets/og-image.png",
     details: item.details ?? [],
     tech: achievementTech[item.slug] ?? [],
     href: `/achievements/${item.slug}`,
@@ -171,6 +168,8 @@ export function FeaturedExperienceSection() {
     ...experience.map(experienceToFeatured),
     ...achievements.filter((item) => item.featured).map(achievementToFeatured),
   ].slice(0, 2);
+
+  if (featuredItems.length === 0) return null;
 
   return (
     <Container>

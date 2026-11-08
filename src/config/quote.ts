@@ -1,14 +1,13 @@
 export const quoteConfig = {
-  text: "You are what you believe in. You become that which you believe you can become",
-  author: "Bhagavad Gita",
+  text: "The present is the key to the past.",
+  author: "James Hutton",
 };
 
 export const rotatingTitles = [
-  "AI Engineer",
-  "Full Stack Developer",
-  "Software Engineer",
-  "Traveller",
-  "Curious Builder",
-  "Creator",
-  "Always ready to learn new things"
+  "Full-stack Developer",
+  "Geologist",
+  "Web Developer",
+  "Bot Builder",
+  "Problem Solver",
+  "Always learning",
 ];

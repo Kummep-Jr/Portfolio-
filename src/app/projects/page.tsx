@@ -6,7 +6,7 @@ import { createPageMetadata, pageTitle } from "@/lib/metadata";
 export const metadata = createPageMetadata({
   title: pageTitle("Projects"),
   description:
-    "AI systems, RAG pipelines, and full-stack products built by Priyanshu Urmaliya.",
+    "Web apps, bots, and full-stack products built by Kummep Jnr.",
   path: "/projects",
 });
 

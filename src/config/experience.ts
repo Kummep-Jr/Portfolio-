@@ -8,20 +8,21 @@ export type ExperienceItem = {
   working?: boolean;
   details?: string[];
   tech?: string[];
+  /** Optional logo shown on the home page, e.g. "/assets/company-logo.png" */
+  logo?: string;
 };
 
-export const experience: ExperienceItem[] = [
-  {
-    company: "Valency Energy",
-    role: "AI/ML Intern",
-    periodShort: "May 25 – Dec 25",
-    periodLong: "May 2025 – December 2025",
-    locationShort: "Remote, IN",
-    locationLong: "Remote, India ",
-    details: [
-      "Developed and optimized machine learning models for renewable energy demand forecasting using Python with real-time IoT data.",
-      "Built automated data pipelines and performed feature engineering to enhance analytics accuracy and system performance.",
-    ],
-    tech: ["Python", "Machine Learning", "IoT", "Data Pipelines", "Feature Engineering"],
-  },
-];
+// TODO: add your roles here. The Work page and the home "Experience" section
+// stay hidden until this list has at least one entry. Example:
+// {
+//   company: "Company name",
+//   role: "Full-stack Developer",
+//   periodShort: "Jan 24 – Present",
+//   periodLong: "January 2024 – Present",
+//   locationShort: "Remote",
+//   locationLong: "Remote",
+//   working: true,
+//   details: ["What you built or improved."],
+//   tech: ["TypeScript", "React", "Node.js"],
+// },
+export const experience: ExperienceItem[] = [];

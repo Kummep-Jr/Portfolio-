@@ -1,7 +1,10 @@
 import Link from "next/link";
 import {
   EnvelopeSimple,
+  FileText,
   GithubLogo,
+  LinkedinLogo,
+  MediumLogo,
   XLogo,
 } from "@phosphor-icons/react/dist/ssr";
 import { Container } from "@/components/container";
@@ -14,6 +17,9 @@ const connectIconMap = {
   mail: EnvelopeSimple,
   x: XLogo,
   github: GithubLogo,
+  linkedin: LinkedinLogo,
+  medium: MediumLogo,
+  resume: FileText,
 };
 
 export const metadata = createPageMetadata({

@@ -1,13 +1,23 @@
 import Link from "next/link";
-import { LinkedinLogo, XLogo } from "@phosphor-icons/react/dist/ssr";
+import { EnvelopeSimple, GithubLogo, LinkedinLogo, MediumLogo, XLogo } from "@phosphor-icons/react/dist/ssr";
 import { Container } from "@/components/container";
 import { siteConfig } from "@/config/meta";
+import { socialLinks } from "@/config/hero";
 import { GitHubButton } from "@/components/ui/github-button";
 
-const footerSocial = [
-  { name: "X", href: "https://x.com/imdevPU23", icon: XLogo },
-  { name: "LinkedIn", href: "https://www.linkedin.com/in/priyanshu-urmaliya-1183b425a/", icon: LinkedinLogo },
-];
+const footerIcons = {
+  x: XLogo,
+  linkedin: LinkedinLogo,
+  github: GithubLogo,
+  medium: MediumLogo,
+  mail: EnvelopeSimple,
+} as const;
+
+const footerSocial = socialLinks.flatMap((link) =>
+  link.icon in footerIcons
+    ? [{ ...link, icon: footerIcons[link.icon as keyof typeof footerIcons] }]
+    : [],
+);
 
 export function SiteFooter() {
   return (

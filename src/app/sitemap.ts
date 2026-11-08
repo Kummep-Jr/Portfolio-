@@ -1,5 +1,6 @@
 import type { MetadataRoute } from "next";
 import { achievements } from "@/config/achievements";
+import { visibleOptionalPages } from "@/config/navigation";
 import { siteConfig } from "@/config/meta";
 import { getBlogPosts, getProjectPosts } from "@/lib/mdx";
 
@@ -7,12 +8,11 @@ const staticRoutes: MetadataRoute.Sitemap = [
   { url: siteConfig.url, changeFrequency: "weekly", priority: 1 },
   { url: `${siteConfig.url}/about`, changeFrequency: "monthly", priority: 0.9 },
   { url: `${siteConfig.url}/projects`, changeFrequency: "weekly", priority: 0.9 },
-  { url: `${siteConfig.url}/work`, changeFrequency: "monthly", priority: 0.8 },
-  { url: `${siteConfig.url}/blog`, changeFrequency: "weekly", priority: 0.8 },
-  { url: `${siteConfig.url}/resume`, changeFrequency: "monthly", priority: 0.8 },
-  { url: `${siteConfig.url}/achievements`, changeFrequency: "monthly", priority: 0.7 },
-  { url: `${siteConfig.url}/books`, changeFrequency: "monthly", priority: 0.6 },
-  { url: `${siteConfig.url}/favourites`, changeFrequency: "monthly", priority: 0.6 },
+  ...visibleOptionalPages.map((page) => ({
+    url: `${siteConfig.url}${page.href}`,
+    changeFrequency: "monthly" as const,
+    priority: 0.7,
+  })),
 ];
 
 function parseDate(value: string | undefined): Date | undefined {

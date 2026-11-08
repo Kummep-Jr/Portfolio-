@@ -1,25 +1,23 @@
 export type TechItem = {
   name: string;
+  /** simpleicons.org slug, or a path under /public */
   icon: string;
 };
 
+// TODO: adjust to the tools you actually use
 export const techStack: TechItem[] = [
   { name: "TypeScript", icon: "typescript" },
+  { name: "JavaScript", icon: "javascript" },
   { name: "Python", icon: "python" },
   { name: "React", icon: "react" },
   { name: "Next.js", icon: "nextdotjs" },
-  { name: "Tailwind CSS", icon: "tailwindcss" },
-  { name: "FastAPI", icon: "fastapi" },
   { name: "Node.js", icon: "nodedotjs" },
+  { name: "Tailwind CSS", icon: "tailwindcss" },
+  { name: "HTML5", icon: "html5" },
+  { name: "CSS", icon: "css" },
+  { name: "Telegram", icon: "telegram" },
   { name: "Git", icon: "git" },
   { name: "GitHub", icon: "github" },
-  { name: "Docker", icon: "docker" },
-  { name: "PostgreSQL", icon: "postgresql" },
-  { name: "MongoDB", icon: "mongodb" },
-  { name: "FAISS", icon: "meta" },
-  { name: "ChromaDB", icon: "/assets/chromadb.png" },
-  { name: "Cloudflare", icon: "cloudflare" },
   { name: "Vercel", icon: "vercel" },
-  { name: "Postman", icon: "postman" },
-  { name: "Figma", icon: "figma" },
+  { name: "QGIS", icon: "qgis" },
 ];

@@ -1,18 +1,18 @@
-import { heroConfig } from "@/config/hero";
+import { heroConfig, socialLinks } from "@/config/hero";
 
 export const aboutConfig = {
-  headline: ["From curious experiments", "to building with AI."],
+  headline: ["From reading rocks", "to writing code."],
   intro:
-    "I'm Priyanshu Urmaliya — an **AI engineer** and **full-stack developer** who enjoys turning messy ideas into working products. I care about the details: clean APIs, useful interfaces, and systems that actually **ship**.",
+    "I'm Kummep Jnr — a **full-stack developer** and **geologist**. I like building things that are useful, fast, and easy to use, from web apps to bots and small automation tools.",
   quote:
-    "I believe the best builders learn in public, ship early, and refine until the product feels obvious to use.",
-  traits: ["Curious", "Builder", "Focused", "Persistent"] as const,
+    "The present is the key to the past — and good software, like good geology, is about reading the layers carefully.",
+  traits: ["Curious", "Builder", "Analytical", "Persistent"] as const,
   traitStyles: {
     Curious:
       "border-sky-200 bg-sky-50 text-sky-700 dark:border-sky-800/80 dark:bg-sky-950/40 dark:text-sky-300",
     Builder:
       "border-emerald-200 bg-emerald-50 text-emerald-700 dark:border-emerald-800/80 dark:bg-emerald-950/40 dark:text-emerald-300",
-    Focused:
+    Analytical:
       "border-amber-200 bg-amber-50 text-amber-700 dark:border-amber-800/80 dark:bg-amber-950/40 dark:text-amber-300",
     Persistent:
       "border-violet-200 bg-violet-50 text-violet-700 dark:border-violet-800/80 dark:bg-violet-950/40 dark:text-violet-300",
@@ -20,37 +20,38 @@ export const aboutConfig = {
   meta: [
     { label: "Location", value: heroConfig.location },
     { label: "Status", value: "Open to opportunities" },
-    { label: "Focus", value: "AI · RAG · Full-stack" },
+    { label: "Focus", value: "Full-stack · Geology" },
   ],
+  // TODO: personalise the story below with your own journey
   story: {
     title: "How it started",
     paragraphs: [
-      "It started in school with a simple question: how does software actually work? I was fascinated by how a few lines of code could become something people use every day. That **curiosity** pushed me toward engineering — and eventually toward **AI**.",
-      "College became a mix of coursework, **hackathons**, and late-night builds. I failed plenty along the way — exams, competitions, and projects that never made it past version one. But each attempt taught me something about **scope**, **teamwork**, and staying calm when things break.",
-      "Hackathons changed the pace. **Smart India Hackathon** pushed me to ship under pressure with a team, communicate clearly, and demo something real — not just a slide deck. That experience shaped how I build today: fast iterations, tight feedback loops, and focus on what **users** actually need.",
-      "Now I spend most of my time at the intersection of **AI and product** — RAG systems, LLM workflows, and full-stack apps that connect models to real interfaces. I'm still figuring things out, but I'm doing it by **building**.",
+      "My background is in **geology** — the study of how the earth is built, layer by layer. It trained me to observe carefully, work with messy real-world data, and explain complex systems clearly.",
+      "Along the way I got hooked on **software**. Writing code felt like the same kind of problem-solving: break a big system into parts, understand how they fit together, and build something that holds up.",
+      "Today I work as a **full-stack developer**, building websites, web apps, and bots — from TypeScript front-ends to Python automation. I care about clean structure, fast pages, and interfaces people actually enjoy using.",
+      "I'm especially interested in where the two worlds meet: tools for **earth-science data**, mapping, and field work that make scientists' lives easier.",
     ],
   },
   principles: {
     title: "How I work",
     items: [
       {
-        title: "Stay curious",
+        title: "Observe first",
         description:
-          "AI moves fast. I learn by building, reading, and talking to people a few steps ahead of me.",
+          "Like logging an outcrop, I start by understanding the problem and the data before writing code.",
       },
       {
         title: "Ship, then refine",
         description:
-          "A working prototype beats a perfect plan. I prefer real feedback over endless polishing.",
+          "A working version beats a perfect plan. I iterate quickly based on real feedback.",
       },
       {
         title: "Sweat the details",
         description:
-          "Loading states, edge cases, and clear UX matter as much as the model or API behind them.",
+          "Loading states, edge cases, and clear UX matter as much as the logic behind them.",
       },
       {
-        title: "Build for humans",
+        title: "Build for people",
         description:
           "Technology is a means to an end. If it doesn't solve a real problem, it doesn't count.",
       },
@@ -59,25 +60,9 @@ export const aboutConfig = {
   beyond: {
     title: "Beyond the code",
     paragraphs: [
-      "Outside of work, you'll find me writing on Medium, exploring new tools, or chasing the next **hackathon** idea. I like **learning in public** and sharing what actually worked — and what didn't.",
-      "I'm drawn to builders who combine **technical depth** with **clarity**. That's the kind of engineer I want to become.",
+      "When I'm not building software, I'm usually thinking about rocks, landscapes, and the processes that shaped them. Geology keeps me grounded — literally.",
+      "I'm always open to collaborating on interesting projects, especially ones that bring **software** and **science** together.",
     ],
   },
-  connectLinks: [
-    {
-      name: "Email",
-      href: "mailto:priyanshuurmaliya23011@gmail.com",
-      icon: "mail" as const,
-    },
-    {
-      name: "X",
-      href: "https://x.com/imdevPU23",
-      icon: "x" as const,
-    },
-    {
-      name: "GitHub",
-      href: "https://github.com/GitHpriyanshu23",
-      icon: "github" as const,
-    },
-  ],
+  connectLinks: socialLinks,
 };

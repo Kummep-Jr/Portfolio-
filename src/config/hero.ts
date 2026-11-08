@@ -1,43 +1,30 @@
 export const heroConfig = {
-  name: "Priyanshu Urmaliya",
-  email: "priyanshuurmaliya23011@gmail.com",
-  calendarUrl: "https://cal.com/priyanshu-urmaliya/15min?overlayCalendar=true",
-  bio: "AI engineer and full-stack developer building RAG systems, LLM apps, and real-world products.",
+  name: "Kummep Jnr",
+  // TODO: replace with the email you want visitors to use
+  email: "hello@example.com",
+  // Optional booking link (e.g. cal.com). Leave empty to hide the "Book a call" button.
+  calendarUrl: "",
+  bio: "Full-stack developer and geologist. I build clean, practical web apps and automation tools — and I bring a field scientist's patience for reading layers, finding patterns, and getting the details right.",
   avatar: "/assets/avatar.png",
-  avatarSmile: "/assets/avatar-smile.png",
-  timezone: "Asia/Kolkata",
-  location: "Indore, India",
+  avatarSmile: "/assets/avatar.png",
+  // TODO: set your IANA timezone (e.g. "Africa/Lagos") and location
+  timezone: "UTC",
+  location: "Earth",
 };
 
-export const socialLinks = [
-  {
-    name: "X",
-    href: "https://x.com/imdevPU23",
-    icon: "x" as const,
-  },
-  {
-    name: "LinkedIn",
-    href: "https://www.linkedin.com/in/priyanshu-urmaliya-1183b425a/",
-    icon: "linkedin" as const,
-  },
+export type SocialIcon = "x" | "linkedin" | "github" | "medium" | "mail" | "resume";
+
+export const socialLinks: { name: string; href: string; icon: SocialIcon }[] = [
   {
     name: "GitHub",
-    href: "https://github.com/GitHpriyanshu23",
-    icon: "github" as const,
+    href: "https://github.com/Kummep-jnr",
+    icon: "github",
   },
-  {
-    name: "Medium",
-    href: "https://medium.com/@priyanshuurmaliya2003",
-    icon: "medium" as const,
-  },
+  // TODO: add LinkedIn / X / Medium here, e.g.
+  // { name: "LinkedIn", href: "https://www.linkedin.com/in/your-profile/", icon: "linkedin" },
   {
     name: "Mail",
-    href: "mailto:priyanshuurmaliya23011@gmail.com",
-    icon: "mail" as const,
-  },
-  {
-    name: "Resume",
-    href: "/resume",
-    icon: "resume" as const,
+    href: `mailto:${heroConfig.email}`,
+    icon: "mail",
   },
 ];

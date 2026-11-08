@@ -1,25 +1,16 @@
-export const education = [
-  {
-    school: "IPS Academy Indore",
-    degree: "Bachelor of Technology · Computer Software Engineering",
-    period: "2022—2026",
-  },
-  {
-    school: "Kendriya Vidyalaya",
-    degree: "Mathematics & Science",
-    period: "2008—2021",
-  },
-];
+// TODO: add your education, e.g.
+// { school: "University name", degree: "BSc · Geology", period: "2018—2022" },
+export const education: { school: string; degree: string; period: string }[] = [];
 
 export const skills = [
-  "Python",
   "TypeScript",
+  "JavaScript",
   "React",
   "Next.js",
-  "FastAPI",
-  "Machine Learning",
-  "RAG",
-  "LLMs",
-  "IoT",
-  "Docker",
+  "Node.js",
+  "Python",
+  "HTML & CSS",
+  "Telegram Bots",
+  "Geology",
+  "GIS",
 ];

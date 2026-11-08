@@ -3,6 +3,7 @@ import { ArrowSquareOut, DownloadSimple } from "@phosphor-icons/react/dist/ssr";
 import { Container } from "@/components/container";
 import { LiquidGlassCard } from "@/components/ui/liquid-glass";
 import { resumeConfig } from "@/config/resume";
+import { siteConfig } from "@/config/meta";
 import { createPageMetadata, pageTitle } from "@/lib/metadata";
 
 export const metadata = createPageMetadata({
@@ -53,7 +54,7 @@ export default function ResumePage() {
         >
           <iframe
             src={resumeConfig.embedUrl}
-            title="Priyanshu Urmaliya resume"
+            title={`${siteConfig.name} resume`}
             className="aspect-[3/4] w-full min-h-[70vh] bg-muted sm:aspect-auto sm:min-h-[80vh]"
             allow="autoplay"
           />
