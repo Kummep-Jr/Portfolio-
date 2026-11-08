@@ -35,8 +35,8 @@ export function Hero() {
         <div className="corner-frame relative h-[calc(var(--grid-cell-size)*4)] overflow-visible">
           <div className="relative size-full overflow-hidden border border-foreground/15">
           <Image
-            src="/assets/header.png"
-            alt="Layered rock strata banner"
+            src="/assets/header.jpg"
+            alt="Rocks road sign with a snow-capped mountain behind"
             fill
             priority
             sizes="(max-width: 640px) 100vw, 720px"

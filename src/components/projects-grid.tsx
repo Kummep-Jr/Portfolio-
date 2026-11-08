@@ -63,15 +63,17 @@ export function ProjectCard({ project, index = 0 }: { project: Project; index?: 
                 <Globe className="size-5" />
               </Link>
             )}
-            <Link
-              href={project.href}
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label={`${project.title} on GitHub`}
-              className="rounded-md p-1 text-secondary transition-colors hover:text-foreground"
-            >
-              <GithubLogo className="size-5" />
-            </Link>
+            {project.href && (
+              <Link
+                href={project.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={`${project.title} on GitHub`}
+                className="rounded-md p-1 text-secondary transition-colors hover:text-foreground"
+              >
+                <GithubLogo className="size-5" />
+              </Link>
+            )}
           </div>
         </div>
 
