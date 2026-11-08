@@ -2,7 +2,7 @@
 
 Personal portfolio of **Kummep Jnr** (Kummep Ringpon Timyil) — full-stack developer, IT technician and University of Jos geology graduate. Built with Next.js 15, TypeScript, Tailwind CSS v4, and MDX.
 
-**GitHub:** [@SmartDev911](https://github.com/SmartDev911)
+**GitHub:** [@Kummep-Jr](https://github.com/Kummep-Jr)
 
 ---
 
@@ -11,7 +11,7 @@ Personal portfolio of **Kummep Jnr** (Kummep Ringpon Timyil) — full-stack deve
 **Requirements:** Node.js 18+
 
 ```bash
-git clone https://github.com/SmartDev911/Portfolio-.git
+git clone https://github.com/Kummep-Jr/Portfolio-.git
 cd Portfolio-
 npm install
 npm run dev

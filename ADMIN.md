@@ -11,12 +11,12 @@ In every section you can add, edit, delete, upload images and files, and drag it
 
 ## How it works
 
-- You sign in with **GitHub**. Only GitHub accounts with **write access to the `SmartDev911/Portfolio-` repository** can save changes. Today that's just you.
+- You sign in with **GitHub**. Only GitHub accounts with **write access to the `Kummep-Jr/Portfolio-` repository** can save changes. Today that's just you.
 - Every save becomes a commit in the repository. Vercel then rebuilds the site, and the change is live in about **1–2 minutes**.
 - Nothing is lost: every past version is in the Git history and can be restored.
 - You don't need a database or a paid service.
 
-> **Which GitHub account?** The repository belongs to **SmartDev911**, so sign in with that account. Do every setup step below (Vercel, GitHub App) while signed in as SmartDev911.
+> **Which GitHub account?** The repository belongs to **Kummep-Jr**, so sign in with that account. Do every setup step below (Vercel, GitHub App) while signed in as Kummep-Jr.
 > Never add anyone as a collaborator unless you want them to be able to edit the site.
 
 ---
@@ -29,7 +29,7 @@ All of this work lives on the `ccr-72923aad-bp0ayv` branch. Open a pull request 
 
 ### 2. Deploy on Vercel
 
-1. Go to <https://vercel.com/new>, sign in with GitHub, and import **SmartDev911/Portfolio-**.
+1. Go to <https://vercel.com/new>, sign in with GitHub, and import **Kummep-Jr/Portfolio-**.
 2. Leave the settings as they are: Framework = Next.js, Production branch = `main`.
 3. Click **Deploy**.
 4. Note your site address, e.g. `https://kummep-jnr.vercel.app`, or add your own domain under Project → Settings → Domains.
