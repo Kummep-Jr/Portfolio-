@@ -25,7 +25,7 @@ export function SiteFooter() {
       <Container className="flex flex-col items-center gap-6 py-8 sm:flex-row sm:items-center sm:justify-between">
         <div className="text-center font-mono text-sm text-secondary sm:text-left">
           <p>© {new Date().getFullYear()} {siteConfig.name}</p>
-          <p className="mt-1">Built in Nigeria · Code &amp; rocks</p>
+          <p className="mt-1">{siteConfig.footerTagline}</p>
         </div>
 
         <div className="flex flex-col items-center gap-4 sm:flex-row sm:gap-6">

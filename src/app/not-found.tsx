@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { Container } from "@/components/container";
 import { Button } from "@/components/ui/button";
+import { SiteChrome } from "@/components/site-chrome";
 
 export const metadata = {
   title: "Page not found | Kummep Jnr",
@@ -8,6 +9,7 @@ export const metadata = {
 
 export default function NotFound() {
   return (
+    <SiteChrome>
     <div className="flex min-h-[60vh] items-center pb-16 pt-20">
       <Container className="text-center">
         <p className="font-mono text-sm text-muted-foreground">404</p>
@@ -20,5 +22,6 @@ export default function NotFound() {
         </Button>
       </Container>
     </div>
+    </SiteChrome>
   );
 }

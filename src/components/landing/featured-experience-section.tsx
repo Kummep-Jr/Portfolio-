@@ -72,7 +72,7 @@ function achievementToFeatured(item: Achievement): FeaturedItem {
     subtitle: item.title,
     period: item.periodLong,
     location: "Achievement",
-    image: item.image ?? "/assets/og-image.png",
+    image: item.image ?? "/icon.png",
     details: item.details ?? [],
     tech: achievementTech[item.slug] ?? [],
     href: `/achievements/${item.slug}`,

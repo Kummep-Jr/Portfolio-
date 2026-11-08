@@ -1,0 +1,42 @@
+{
+  "title": "CV",
+  "description": "Six tailored versions of my CV — pick the one that fits the role. Each is available as PDF and Word.",
+  "variants": [
+    {
+      "title": "Software & IT",
+      "focus": "Full-stack developer, junior software developer and IT support roles.",
+      "pdf": "/cv/Kummep-Ringpon-Timyil-CV-software-it.pdf",
+      "docx": "/cv/Kummep-Ringpon-Timyil-CV-software-it.docx"
+    },
+    {
+      "title": "General Geology",
+      "focus": "Entry-level geologist roles in solid minerals, environmental and geospatial work.",
+      "pdf": "/cv/Kummep-Ringpon-Timyil-CV-general-geology.pdf",
+      "docx": "/cv/Kummep-Ringpon-Timyil-CV-general-geology.docx"
+    },
+    {
+      "title": "GIS & Cartography",
+      "focus": "GIS analyst, cartographer and geospatial technician roles.",
+      "pdf": "/cv/Kummep-Ringpon-Timyil-CV-gis-cartography.pdf",
+      "docx": "/cv/Kummep-Ringpon-Timyil-CV-gis-cartography.docx"
+    },
+    {
+      "title": "Mining & Exploration",
+      "focus": "Solid minerals exploration, mining and quarrying roles.",
+      "pdf": "/cv/Kummep-Ringpon-Timyil-CV-mining-exploration.pdf",
+      "docx": "/cv/Kummep-Ringpon-Timyil-CV-mining-exploration.docx"
+    },
+    {
+      "title": "Hydrogeology & Environmental",
+      "focus": "Groundwater exploration, environmental assessment and geotechnical site investigation.",
+      "pdf": "/cv/Kummep-Ringpon-Timyil-CV-hydrogeology-environmental.pdf",
+      "docx": "/cv/Kummep-Ringpon-Timyil-CV-hydrogeology-environmental.docx"
+    },
+    {
+      "title": "Academic & Research",
+      "focus": "Graduate assistant, research assistant and M.Sc. positions in geology.",
+      "pdf": "/cv/Kummep-Ringpon-Timyil-CV-academic-research.pdf",
+      "docx": "/cv/Kummep-Ringpon-Timyil-CV-academic-research.docx"
+    }
+  ]
+}

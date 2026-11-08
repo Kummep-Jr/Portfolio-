@@ -28,7 +28,10 @@ async function readMdxFiles(dir: string): Promise<ContentItem[]> {
           slug: file.replace(/\.mdx$/, ""),
           title: String(data.title ?? file),
           description: String(data.description ?? ""),
-          date: String(data.date ?? ""),
+          date:
+            data.date instanceof Date
+              ? data.date.toISOString().slice(0, 10)
+              : String(data.date ?? ""),
           cover: data.cover ? String(data.cover) : undefined,
           tech: Array.isArray(data.tech) ? data.tech.map(String) : undefined,
           content,

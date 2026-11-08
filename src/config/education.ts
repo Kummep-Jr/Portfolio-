@@ -1,3 +1,6 @@
+import data from "../../content/settings/education.json";
+import { list, obj, str, strList } from "@/lib/content";
+
 export type EducationItem = {
   school: string;
   degree: string;
@@ -6,70 +9,23 @@ export type EducationItem = {
   details?: string[];
 };
 
-export const education: EducationItem[] = [
-  {
-    school: "University of Jos",
-    degree: "B.Sc. (Hons) Geology · Second Class Lower",
-    period: "2025",
-    location: "Jos, Plateau State",
-    details: [
-      "CGPA 3.43/5.00.",
-      "Final-year project: Geology and Petrographic Study of Parts of Wulmi and Its Environs (Pankshin Sheet 190NE), North Central Nigeria. Supervisor: Dr. I. C. Lekmang.",
-      "Relevant courses: Geological Field Mapping, Igneous & Metamorphic Petrology, Structural Geology, GIS & Remote Sensing, Hydrogeology, Engineering Geology.",
-    ],
-  },
-  {
-    school: "Sureq Model College",
-    degree: "West African Senior School Certificate (WASSCE)",
-    period: "2019",
-    location: "Abattoir, Jos, Plateau State",
-  },
-];
+const content = obj(data);
 
-export const skillGroups: { title: string; items: string[] }[] = [
-  {
-    title: "Software",
-    items: [
-      "Python, JavaScript, TypeScript, HTML, CSS",
-      "Django, Flask, FastAPI, Node.js, Express",
-      "React, Next.js, Tailwind CSS, Bootstrap",
-      "React Native, Flutter",
-      "PostgreSQL, MySQL, MongoDB, Firebase, Supabase",
-      "Git, Docker, Linux, Vercel, Netlify, VPS hosting",
-    ],
-  },
-  {
-    title: "Geology & GIS",
-    items: [
-      "Geological & structural field mapping (GPS, compass-clinometer)",
-      "Thin-section petrography & modal analysis",
-      "Stream sediment & rock sampling, sample preparation",
-      "Rose-diagram fracture & lineament analysis",
-      "ArcGIS Pro, QGIS, Surfer, CorelDRAW",
-      "DEM, drainage, topographic & satellite imagery maps",
-    ],
-  },
-  {
-    title: "IT support",
-    items: [
-      "OS installation & office computer setup",
-      "Hardware repair & software troubleshooting",
-      "Small network setup & data recovery",
-    ],
-  },
-  {
-    title: "Other",
-    items: [
-      "Technical & scientific report writing",
-      "Mentoring, teaching & training",
-      "Languages: English, Hausa, Taroh",
-    ],
-  },
-];
+export const education: EducationItem[] = list(content.education)
+  .map(obj)
+  .map((item) => ({
+    school: str(item.school),
+    degree: str(item.degree),
+    period: str(item.period),
+    location: str(item.location),
+    details: strList(item.details),
+  }))
+  .filter((item) => item.school);
 
-export const memberships = [
-  "Nigerian Mining and Geosciences Society (NMGS) — Student Member",
-  "Nigerian Association of Petroleum Explorationists (NAPE) — Student Chapter Member",
-];
+export const skillGroups: { title: string; items: string[] }[] = list(content.skillGroups)
+  .map(obj)
+  .map((group) => ({ title: str(group.title), items: strList(group.items) }))
+  .filter((group) => group.title || group.items.length);
 
+export const memberships: string[] = strList(content.memberships);
 export const skills = skillGroups.flatMap((group) => group.items);

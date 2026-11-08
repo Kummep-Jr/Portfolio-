@@ -1,9 +1,17 @@
+import data from "../../content/settings/books.json";
+import { list, obj, str } from "@/lib/content";
+
 export type Book = {
   title: string;
   author: string;
   cover: string;
 };
 
-// TODO: add books you love (cover images go in public/assets/books/).
-// The Books page is hidden from navigation while this list is empty.
-export const books: Book[] = [];
+export const books: Book[] = list(obj(data).items)
+  .map(obj)
+  .filter((book) => str(book.title))
+  .map((book) => ({
+    title: str(book.title),
+    author: str(book.author),
+    cover: str(book.cover) || "/icon.png",
+  }));

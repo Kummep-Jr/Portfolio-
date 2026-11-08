@@ -30,26 +30,18 @@ Open [http://localhost:3000](http://localhost:3000).
 
 ## Editing content
 
-Almost everything lives in **`src/config/`**. Search for `TODO` to find the spots still waiting for your details.
+Use the **admin panel** at `/keystatic`. It covers your profile, About page, experience, CVs, projects, maps, blog, achievements, books and favourites. To set it up and use it, see **[ADMIN.md](./ADMIN.md)**.
 
-| File | What to edit |
-|------|--------------|
-| `meta.ts` | Site title, description, domain, X/Twitter handle |
-| `hero.ts` | Name, bio, email, timezone, location, social links |
-| `about.ts` | About page story, traits, principles |
-| `projects.ts` | Projects (GitHub link, live site, tech, optional cover) |
-| `experience.ts` | Work history — the Work page appears once this has entries |
-| `education.ts` | Education, skill groups and memberships (shown on the CV page) |
-| `achievements.ts` | Awards and milestones — page appears once this has entries |
-| `resume.ts` | The six CV variants on the CV page (files live in `public/cv/`) |
-| `books.ts` / `favourites.ts` | Books, movies, series — pages appear once filled |
-| `tech-stack.ts` | Home page tech icons ([simpleicons.org](https://simpleicons.org) slugs) |
-| `quote.ts` | Quote card and rotating titles under your name |
+Behind the scenes, all content lives in plain files:
 
-- **CVs:** to update a CV, replace the `.docx` in `public/cv/` and regenerate the PDF (e.g. `soffice --headless --convert-to pdf --outdir public/cv public/cv/<file>.docx`).
-- **Blog posts:** add `.mdx` files to `content/blog/`, then set `hasBlog = true` in `src/config/navigation.ts`.
-- **Project write-ups:** add `.mdx` files to `content/projects/` (optional detail pages).
-- **Images:** put files in `public/assets/` and reference them as `/assets/your-image.png`. Avatar: `public/assets/avatar.png`; banner: `public/assets/header.jpg`; social preview: `public/assets/og-image.jpg`.
+| Where | What |
+|---|---|
+| `content/settings/*.json` | Profile, About, experience, education, CVs, projects, maps, achievements, books, favourites, tech stack |
+| `content/blog/*.mdx` | Blog posts |
+| `public/assets/…`, `public/cv/` | Uploaded images and files |
+| `keystatic.config.ts` | The admin panel's fields |
+
+The code in `src/config/` reads these files. Missing fields are handled safely, so an edit made in the admin can't break the build.
 
 ---
 

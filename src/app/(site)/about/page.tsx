@@ -133,10 +133,9 @@ export default function AboutPage() {
           blurIntensity="md"
           className="max-w-2xl space-y-4 p-6"
         >
-          <h2 className="text-xl font-bold tracking-tight">Let&apos;s connect</h2>
+          <h2 className="text-xl font-bold tracking-tight">{aboutConfig.connect.title}</h2>
           <p className="text-sm leading-relaxed text-secondary sm:text-base">
-            Need a web app, a map, or a geologist on your team — or just want to say hi? I&apos;d love to
-            hear from you.
+            {aboutConfig.connect.text}
           </p>
           <div className="flex flex-wrap gap-2 pt-1">
             {aboutConfig.connectLinks.map((link) => {

@@ -1,3 +1,4 @@
+import { formatDate } from "@/lib/utils";
 import Link from "next/link";
 import { ArrowUpRight } from "@phosphor-icons/react/dist/ssr";
 import { BlogCover } from "@/components/blog-cover";
@@ -44,7 +45,7 @@ export default async function BlogPage() {
                 />
                 <div className="p-5 sm:p-6">
                   <div className="flex items-start justify-between gap-3">
-                    <p className="text-xs uppercase tracking-wider text-secondary">{post.date}</p>
+                    <p className="text-xs uppercase tracking-wider text-secondary">{formatDate(post.date)}</p>
                     <ArrowUpRight className="size-4 shrink-0 text-secondary opacity-0 transition-opacity group-hover:opacity-100" />
                   </div>
                   <h2 className="mt-2 text-xl font-bold tracking-tight sm:text-2xl">

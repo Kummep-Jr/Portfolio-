@@ -60,14 +60,16 @@ export default function ResumePage() {
                   PDF
                   <DownloadSimple className="size-3.5" />
                 </a>
-                <a
-                  href={cv.docx}
-                  download
-                  className="inline-flex items-center gap-1.5 rounded-full border border-border bg-background px-3 py-1.5 text-xs font-medium transition-colors hover:bg-muted"
-                >
-                  Word
-                  <FileDoc className="size-3.5" />
-                </a>
+                {cv.docx && (
+                  <a
+                    href={cv.docx}
+                    download
+                    className="inline-flex items-center gap-1.5 rounded-full border border-border bg-background px-3 py-1.5 text-xs font-medium transition-colors hover:bg-muted"
+                  >
+                    Word
+                    <FileDoc className="size-3.5" />
+                  </a>
+                )}
               </div>
             </li>
           ))}

@@ -1,13 +1,9 @@
-export const quoteConfig = {
-  text: "The present is the key to the past.",
-  author: "James Hutton",
-};
+import profileJson from "../../content/settings/profile.json";
+import { obj, str, strList } from "@/lib/content";
 
-export const rotatingTitles = [
-  "Full-stack Developer",
-  "Geologist",
-  "GIS Analyst & Cartographer",
-  "IT Technician",
-  "Field Mapper",
-  "Always learning",
-];
+const profile = obj(profileJson);
+const quote = obj(profile.quote);
+
+export const quoteConfig = { text: str(quote.text), author: str(quote.author) };
+
+export const rotatingTitles = strList(profile.rotatingTitles);

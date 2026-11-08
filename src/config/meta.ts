@@ -1,14 +1,18 @@
+import profileJson from "../../content/settings/profile.json";
+import { obj, str } from "@/lib/content";
+
+const profile = obj(profileJson);
+
 export const siteConfig = {
-  name: "Kummep Jnr",
-  title: "Kummep Jnr | Full-stack Developer & Geologist",
-  description:
-    "Portfolio of Kummep Jnr (Kummep Ringpon Timyil) — full-stack developer, IT technician and University of Jos geology graduate working across web apps, GIS mapping and field geology in Nigeria.",
-  // TODO: replace with your real domain once deployed
-  url: "https://kummep-jnr.vercel.app",
-  githubUsername: "SmartDev911",
-  twitterHandle: "@Smart_dev001",
-  ogImage: "/assets/og-image.jpg",
+  name: str(profile.name, "Kummep Jnr"),
+  title: str(profile.siteTitle, str(profile.name, "Kummep Jnr")),
+  description: str(profile.siteDescription),
+  url: str(profile.siteUrl, "https://kummep-jnr.vercel.app").replace(/\/$/, "") || "https://kummep-jnr.vercel.app",
+  githubUsername: str(profile.githubUsername),
+  twitterHandle: str(profile.twitterHandle),
+  ogImage: str(profile.ogImage, "/assets/profile/og-image.jpg") || "/assets/profile/og-image.jpg",
   ogImageWidth: 1200,
   ogImageHeight: 630,
   copyright: "All rights reserved.",
+  footerTagline: str(profile.footerTagline),
 };

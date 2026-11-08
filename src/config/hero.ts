@@ -1,42 +1,32 @@
-export const heroConfig = {
-  name: "Kummep Jnr",
-  fullName: "Kummep Ringpon Timyil",
-  email: "ringpon123@gmail.com",
-  // Optional booking link (e.g. cal.com). Leave empty to hide the "Book a call" button.
-  calendarUrl: "",
-  bio: "Full-stack developer, IT technician and geology graduate (University of Jos, 2025). I build web apps with Python and JavaScript, make GIS and geological maps, and bring a field geologist's eye for detail to everything I ship.",
-  avatar: "/assets/avatar.png",
-  avatarSmile: "/assets/avatar.png",
-  timezone: "Africa/Lagos",
-  location: "Girei, Adamawa State, Nigeria",
-};
+import profileJson from "../../content/settings/profile.json";
+import { list, obj, str } from "@/lib/content";
+
+const profile = obj(profileJson);
 
 export type SocialIcon = "x" | "linkedin" | "github" | "medium" | "mail" | "resume";
+const icons: SocialIcon[] = ["x", "linkedin", "github", "medium", "mail", "resume"];
 
-export const socialLinks: { name: string; href: string; icon: SocialIcon }[] = [
-  {
-    name: "GitHub",
-    href: "https://github.com/SmartDev911",
-    icon: "github",
-  },
-  {
-    name: "LinkedIn",
-    href: "https://www.linkedin.com/in/ringpon-kummep-969318403",
-    icon: "linkedin",
-  },
-  {
-    name: "X",
-    href: "https://x.com/Smart_dev001",
-    icon: "x",
-  },
-  {
-    name: "Mail",
-    href: `mailto:${heroConfig.email}`,
-    icon: "mail",
-  },
-  {
-    name: "CV",
-    href: "/resume",
-    icon: "resume",
-  },
-];
+const avatar = str(profile.avatar) || "/icon.png";
+
+export const heroConfig = {
+  name: str(profile.name, "Kummep Jnr"),
+  fullName: str(profile.fullName) || str(profile.name, "Kummep Jnr"),
+  email: str(profile.email),
+  calendarUrl: str(profile.calendarUrl),
+  bio: str(profile.bio),
+  avatar,
+  avatarSmile: avatar,
+  banner: str(profile.banner) || "/assets/profile/banner.jpg",
+  bannerAlt: str(profile.bannerAlt),
+  timezone: str(profile.timezone) || "Africa/Lagos",
+  location: str(profile.location),
+};
+
+export const socialLinks = list(profile.socialLinks)
+  .map(obj)
+  .map((link) => ({
+    name: str(link.name),
+    href: str(link.href),
+    icon: (icons.includes(link.icon as SocialIcon) ? link.icon : "github") as SocialIcon,
+  }))
+  .filter((link) => link.href);

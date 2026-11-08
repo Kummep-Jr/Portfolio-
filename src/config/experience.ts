@@ -1,7 +1,9 @@
+import data from "../../content/settings/experience.json";
+import { bool, list, obj, str, strList } from "@/lib/content";
+
 export type ExperienceItem = {
   company: string;
   role: string;
-  /** Employment type shown next to the dates, e.g. "Freelance", "NYSC" */
   type: string;
   periodShort: string;
   periodLong: string;
@@ -10,85 +12,22 @@ export type ExperienceItem = {
   working?: boolean;
   details?: string[];
   tech?: string[];
-  /** Optional logo shown on the home page, e.g. "/assets/company-logo.png" */
   logo?: string;
 };
 
-export const experience: ExperienceItem[] = [
-  {
-    company: "Freelance",
-    role: "Full-Stack Developer",
-    type: "Self-employed",
-    periodShort: "2023 – Present",
-    periodLong: "2023 – Present",
-    locationShort: "Remote, NG",
-    locationLong: "Remote, Nigeria",
-    working: true,
-    details: [
-      "Design, build and deploy web applications for clients using Python (Django, Flask, FastAPI) and JavaScript (React, Next.js, Node.js/Express).",
-      "Host applications on Vercel, Netlify and VPS servers, using Docker and Git/GitHub.",
-      "Shipped a cosmetics e-commerce store (de Saint) and a parcel delivery platform for Jos (GDS Prime Logistics).",
-    ],
-    tech: ["Python", "Django", "Flask", "React", "Next.js", "Docker"],
-  },
-  {
-    company: "Modibbo Adama University",
-    role: "NYSC Corps Member, Department of Geology",
-    type: "NYSC",
-    periodShort: "2026 – Aug 27",
-    periodLong: "2026 – August 2027 (expected)",
-    locationShort: "Yola, NG",
-    locationLong: "Yola, Adamawa State, Nigeria",
-    working: true,
-    details: [
-      "Assist final-year geology students with their research projects, including finding literature and reference material.",
-      "Run library duties for the department and provide general technical and administrative support.",
-      "Trainer in the NYSC Digital Literacy CDS group, teaching basic computer and digital skills to the host community.",
-    ],
-  },
-  {
-    company: "Freelance",
-    role: "Cartographer & GIS Analyst",
-    type: "Self-employed",
-    periodShort: "2025 – Present",
-    periodLong: "2025 – Present",
-    locationShort: "Remote, NG",
-    locationLong: "Remote, Nigeria",
-    working: true,
-    details: [
-      "Produce topographic, drainage, digital elevation model (DEM), satellite imagery and geological maps for clients.",
-      "Process and analyse spatial data in ArcGIS Pro, QGIS and Surfer, and finish map layouts in CorelDRAW.",
-    ],
-    tech: ["ArcGIS Pro", "QGIS", "Surfer", "CorelDRAW"],
-  },
-  {
-    company: "Freelance",
-    role: "IT Technician",
-    type: "Self-employed",
-    periodShort: "2023 – Present",
-    periodLong: "2023 – Present",
-    locationShort: "Nigeria",
-    locationLong: "Nigeria",
-    working: true,
-    details: [
-      "Install and configure operating systems and set up computers for offices.",
-      "Diagnose and repair hardware faults and troubleshoot software problems.",
-      "Set up small networks and recover data from failed storage devices.",
-    ],
-    tech: ["Linux", "Windows", "Networking"],
-  },
-  {
-    company: "Nigerian Geological Survey Agency (NGSA)",
-    role: "Industrial Trainee (SIWES)",
-    type: "Industrial training",
-    periodShort: "2024",
-    periodLong: "2024",
-    locationShort: "Jos, NG",
-    locationLong: "Jos, Plateau State, Nigeria",
-    details: [
-      "Collected stream sediment samples for a geochemical survey.",
-      "Took part in geological field mapping with NGSA field teams.",
-      "Prepared rock and sediment samples, assisted with laboratory analysis, and wrote field and laboratory reports.",
-    ],
-  },
-];
+export const experience: ExperienceItem[] = list(obj(data).items)
+  .map(obj)
+  .map((item) => ({
+    role: str(item.role),
+    company: str(item.company),
+    type: str(item.type),
+    periodShort: str(item.periodShort) || str(item.periodLong),
+    periodLong: str(item.periodLong) || str(item.periodShort),
+    locationShort: str(item.locationShort) || str(item.locationLong),
+    locationLong: str(item.locationLong) || str(item.locationShort),
+    working: bool(item.working),
+    details: strList(item.details),
+    tech: strList(item.tech),
+    logo: str(item.logo) || undefined,
+  }))
+  .filter((item) => item.role || item.company);

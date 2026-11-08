@@ -1,0 +1,58 @@
+{
+  "name": "Kummep Jnr",
+  "fullName": "Kummep Ringpon Timyil",
+  "siteTitle": "Kummep Jnr | Full-stack Developer & Geologist",
+  "siteDescription": "Portfolio of Kummep Jnr (Kummep Ringpon Timyil) — full-stack developer, IT technician and University of Jos geology graduate working across web apps, GIS mapping and field geology in Nigeria.",
+  "siteUrl": "https://kummep-jnr.vercel.app",
+  "githubUsername": "SmartDev911",
+  "twitterHandle": "@Smart_dev001",
+  "email": "ringpon123@gmail.com",
+  "calendarUrl": "",
+  "bio": "Full-stack developer, IT technician and geology graduate (University of Jos, 2025). I build web apps with Python and JavaScript, make GIS and geological maps, and bring a field geologist's eye for detail to everything I ship.",
+  "avatar": "/assets/profile/avatar.png",
+  "banner": "/assets/profile/banner.jpg",
+  "bannerAlt": "Rocks road sign with a snow-capped mountain behind",
+  "ogImage": "/assets/profile/og-image.jpg",
+  "timezone": "Africa/Lagos",
+  "location": "Girei, Adamawa State, Nigeria",
+  "rotatingTitles": [
+    "Full-stack Developer",
+    "Geologist",
+    "GIS Analyst & Cartographer",
+    "IT Technician",
+    "Field Mapper",
+    "Always learning"
+  ],
+  "quote": {
+    "text": "The present is the key to the past.",
+    "author": "James Hutton"
+  },
+  "socialLinks": [
+    {
+      "name": "GitHub",
+      "href": "https://github.com/SmartDev911",
+      "icon": "github"
+    },
+    {
+      "name": "LinkedIn",
+      "href": "https://www.linkedin.com/in/ringpon-kummep-969318403",
+      "icon": "linkedin"
+    },
+    {
+      "name": "X",
+      "href": "https://x.com/Smart_dev001",
+      "icon": "x"
+    },
+    {
+      "name": "Mail",
+      "href": "mailto:ringpon123@gmail.com",
+      "icon": "mail"
+    },
+    {
+      "name": "CV",
+      "href": "/resume",
+      "icon": "resume"
+    }
+  ],
+  "footerTagline": "Built in Nigeria · Code & rocks"
+}

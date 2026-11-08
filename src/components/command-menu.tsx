@@ -4,9 +4,9 @@ import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 import { Command } from "cmdk";
 import { MagnifyingGlass, X } from "@phosphor-icons/react";
-import { commandItems } from "@/config/navigation";
+import type { CommandItem } from "@/lib/navigation-types";
 
-export function CommandMenu() {
+export function CommandMenu({ items: commandItems }: { items: CommandItem[] }) {
   const [open, setOpen] = useState(false);
   const router = useRouter();
 

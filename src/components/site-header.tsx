@@ -4,12 +4,12 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { CaretDown, House, MagnifyingGlass } from "@phosphor-icons/react";
 import { useEffect, useRef, useState } from "react";
-import { headerNav, moreNav } from "@/config/navigation";
+import type { NavItem } from "@/lib/navigation-types";
 import { cn } from "@/lib/utils";
 import { ThemeToggle } from "@/components/theme-toggle";
 import { LiquidGlassCard } from "@/components/ui/liquid-glass";
 
-function MoreMenu() {
+function MoreMenu({ moreNav }: { moreNav: NavItem[] }) {
   const [open, setOpen] = useState(false);
   const ref = useRef<HTMLDivElement>(null);
 
@@ -56,7 +56,13 @@ function MoreMenu() {
   );
 }
 
-export function SiteHeader() {
+export function SiteHeader({
+  headerNav,
+  moreNav,
+}: {
+  headerNav: NavItem[];
+  moreNav: NavItem[];
+}) {
   const pathname = usePathname();
 
   const openCommand = () => {
@@ -90,7 +96,7 @@ export function SiteHeader() {
                 {item.label}
               </Link>
             ))}
-            {moreNav.length > 0 && <MoreMenu />}
+            {moreNav.length > 0 && <MoreMenu moreNav={moreNav} />}
           </nav>
 
           <button
