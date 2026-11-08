@@ -6,7 +6,7 @@ import { collection, config, fields, singleton } from "@keystatic/core";
  * committed to GitHub (only accounts with write access to the repo can save).
  */
 
-const REPO = "Kummep-jnr/Portfolio-" as const;
+const REPO = "SmartDev911/Portfolio-" as const;
 
 const highlightHint = "Wrap words in **double stars** to highlight them.";
 

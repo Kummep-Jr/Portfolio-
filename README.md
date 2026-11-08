@@ -11,7 +11,7 @@ Personal portfolio of **Kummep Jnr** (Kummep Ringpon Timyil) — full-stack deve
 **Requirements:** Node.js 18+
 
 ```bash
-git clone https://github.com/Kummep-jnr/Portfolio-.git
+git clone https://github.com/SmartDev911/Portfolio-.git
 cd Portfolio-
 npm install
 npm run dev
