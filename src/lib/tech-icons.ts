@@ -26,6 +26,14 @@ export const techIconMap: Record<string, string> = {
   MobileNetV2: "tensorflow",
   "Google Generative AI": "google",
   "GitHub API": "github",
+  Django: "django",
+  Flask: "flask",
+  "Alpine.js": "alpinedotjs",
+  QGIS: "qgis",
+  CorelDRAW: "coreldraw",
+  Express: "express",
+  Linux: "linux",
+  Flutter: "flutter",
 };
 
 export function getTechIcon(tech: string) {

@@ -34,7 +34,7 @@ function ExperienceCard({
         </div>
         <div className="min-w-0 space-y-3">
           <div className="flex flex-wrap items-center gap-2">
-            <h3 className="text-2xl font-bold tracking-tight">{job.company}</h3>
+            <h3 className="text-2xl font-bold tracking-tight">{job.role}</h3>
             {job.working && (
               <div className="flex items-center gap-1 rounded-md border border-green-300 bg-green-500/10 px-2 py-1 text-xs">
                 <div className="size-2 animate-pulse rounded-full bg-green-500" />
@@ -43,9 +43,9 @@ function ExperienceCard({
             )}
           </div>
           <div>
-            <p className="text-xl font-bold tracking-tight">{job.role}</p>
+            <p className="text-xl font-medium tracking-tight">{job.company}</p>
             <p className="mt-1 text-base text-secondary">
-              Internship
+              {job.type}
               <span className="mx-2 text-border">|</span>
               <span className="md:hidden">{job.periodShort}</span>
               <span className="hidden md:inline">{job.periodLong}</span>
@@ -59,7 +59,7 @@ function ExperienceCard({
             type="button"
             onClick={onToggle}
             aria-expanded={open}
-            aria-controls={`experience-${job.company}`}
+            aria-controls={`experience-${job.company}-${job.role}`.replace(/\W+/g, "-")}
             className="inline-flex size-8 shrink-0 items-center justify-center rounded-md text-secondary transition-colors hover:bg-muted hover:text-foreground"
           >
             {open ? <X className="size-4" /> : <Plus className="size-4" />}
@@ -69,7 +69,7 @@ function ExperienceCard({
       </div>
       {open && (
         <div
-          id={`experience-${job.company}`}
+          id={`experience-${job.company}-${job.role}`.replace(/\W+/g, "-")}
           className="animate-in-up-on-view mt-5 space-y-5 sm:ml-[76px]"
         >
           <div className="space-y-2 text-base leading-relaxed text-foreground">
@@ -111,12 +111,12 @@ export function ExperienceSection({
       <div>
         {items.map((job, index) => (
           <ExperienceCard
-            key={job.company}
+            key={`${job.company}-${job.role}`}
             job={job}
             delay={(index + 1) * 0.05}
-            open={openJob === job.company}
+            open={openJob === `${job.company}-${job.role}`}
             onToggle={() =>
-              setOpenJob((current) => (current === job.company ? null : job.company))
+              setOpenJob((current) => (current === `${job.company}-${job.role}` ? null : `${job.company}-${job.role}`))
             }
           />
         ))}

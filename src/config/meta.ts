@@ -2,7 +2,7 @@ export const siteConfig = {
   name: "Kummep Jnr",
   title: "Kummep Jnr | Full-stack Developer & Geologist",
   description:
-    "Portfolio of Kummep Jnr — a full-stack developer and geologist building web apps, bots, and tools that bridge software and the earth sciences.",
+    "Portfolio of Kummep Jnr (Kummep Ringpon Timyil) — full-stack developer, IT technician and University of Jos geology graduate working across web apps, GIS mapping and field geology in Nigeria.",
   // TODO: replace with your real domain once deployed
   url: "https://kummep-jnr.vercel.app",
   githubUsername: "Kummep-jnr",

@@ -5,7 +5,7 @@ import { createPageMetadata, pageTitle } from "@/lib/metadata";
 export const metadata = createPageMetadata({
   title: pageTitle("Work"),
   description:
-    "Work experience and internships of Kummep Jnr — roles where I've built, shipped, and learned.",
+    "Work experience of Kummep Jnr — freelance full-stack development, GIS mapping, IT support, NYSC and NGSA industrial training.",
   path: "/work",
 });
 
@@ -15,7 +15,7 @@ export default function WorkPage() {
       <Container>
         <h1 className="text-3xl font-bold tracking-tight">Work</h1>
         <p className="mt-3 text-muted-foreground">
-          Roles and internships where I&apos;ve built, shipped, and learned.
+          Freelance work, national service and industrial training — in software, IT and geology.
         </p>
       </Container>
       <ExperienceSection />

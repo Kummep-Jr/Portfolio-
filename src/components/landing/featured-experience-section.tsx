@@ -42,6 +42,12 @@ const techIcons: Record<string, string> = {
   Python: "python",
   React: "react",
   TypeScript: "typescript",
+  Django: "django",
+  Flask: "flask",
+  Docker: "docker",
+  QGIS: "qgis",
+  CorelDRAW: "coreldraw",
+  Linux: "linux",
 };
 
 const achievementTech: Record<string, string[]> = {};
@@ -49,11 +55,11 @@ const achievementTech: Record<string, string[]> = {};
 function experienceToFeatured(item: ExperienceItem): FeaturedItem {
   return {
     type: "experience",
-    title: item.company,
-    subtitle: item.role,
+    title: item.role,
+    subtitle: item.company,
     period: item.periodLong,
     location: item.locationLong.trim(),
-    image: item.logo ?? "/assets/avatar.png",
+    image: item.logo ?? "/icon.png",
     details: item.details ?? [],
     tech: item.tech ?? [],
     href: "/work",
@@ -75,18 +81,20 @@ function achievementToFeatured(item: Achievement): FeaturedItem {
 }
 
 function TechPill({ name }: { name: string }) {
-  const icon = techIcons[name] ?? name.toLowerCase().replaceAll(" ", "");
+  const icon = techIcons[name];
 
   return (
     <span className="inline-flex items-center gap-1.5 rounded-lg border border-border bg-background/70 px-3 py-1.5 text-sm font-semibold text-foreground shadow-sm">
-      <Image
-        src={`https://cdn.simpleicons.org/${icon}`}
-        alt=""
-        width={16}
-        height={16}
-        className="size-4 shrink-0"
-        unoptimized
-      />
+      {icon && (
+        <Image
+          src={`https://cdn.simpleicons.org/${icon}`}
+          alt=""
+          width={16}
+          height={16}
+          className="size-4 shrink-0"
+          unoptimized
+        />
+      )}
       {name}
     </span>
   );
@@ -182,7 +190,7 @@ export function FeaturedExperienceSection() {
 
       <div className="space-y-6">
         {featuredItems.map((item, index) => {
-          const itemId = `${item.type}-${item.title}`;
+          const itemId = `${item.type}-${item.title}-${item.subtitle}`;
 
           return (
             <FeaturedExperienceItem

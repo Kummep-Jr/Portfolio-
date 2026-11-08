@@ -1,9 +1,9 @@
-import { heroConfig, socialLinks } from "@/config/hero";
+import { socialLinks } from "@/config/hero";
 
 export const aboutConfig = {
   headline: ["From reading rocks", "to writing code."],
   intro:
-    "I'm Kummep Jnr — a **full-stack developer** and **geologist**. I like building things that are useful, fast, and easy to use, from web apps to bots and small automation tools.",
+    "I'm Kummep Ringpon Timyil — Kummep Jnr — a **full-stack developer**, **IT technician** and **geology graduate** of the University of Jos. I build web apps for clients, make maps for people who need to understand the ground, and fix the computers in between.",
   quote:
     "The present is the key to the past — and good software, like good geology, is about reading the layers carefully.",
   traits: ["Curious", "Builder", "Analytical", "Persistent"] as const,
@@ -18,18 +18,17 @@ export const aboutConfig = {
       "border-violet-200 bg-violet-50 text-violet-700 dark:border-violet-800/80 dark:bg-violet-950/40 dark:text-violet-300",
   },
   meta: [
-    { label: "Location", value: heroConfig.location },
-    { label: "Status", value: "Open to opportunities" },
-    { label: "Focus", value: "Full-stack · Geology" },
+    { label: "Location", value: "Girei, Adamawa, Nigeria" },
+    { label: "Status", value: "NYSC · Open to opportunities" },
+    { label: "Focus", value: "Full-stack · GIS · Geology" },
   ],
-  // TODO: personalise the story below with your own journey
   story: {
     title: "How it started",
     paragraphs: [
-      "My background is in **geology** — the study of how the earth is built, layer by layer. It trained me to observe carefully, work with messy real-world data, and explain complex systems clearly.",
-      "Along the way I got hooked on **software**. Writing code felt like the same kind of problem-solving: break a big system into parts, understand how they fit together, and build something that holds up.",
-      "Today I work as a **full-stack developer**, building websites, web apps, and bots — from TypeScript front-ends to Python automation. I care about clean structure, fast pages, and interfaces people actually enjoy using.",
-      "I'm especially interested in where the two worlds meet: tools for **earth-science data**, mapping, and field work that make scientists' lives easier.",
+      "I studied **geology** at the University of Jos, graduating in 2025. Field mapping exercises took me across the Jos Plateau — Kanam, Wase, Mazah, Miango, Barkin Ladi — and my industrial training with the **Nigerian Geological Survey Agency (NGSA)** put me on real field teams collecting stream sediment samples and writing reports.",
+      "For my final-year project I independently mapped **14 km²** of Basement Complex terrain around Wulmi, Pankshin, at 1:12,500 scale, combining structural analysis with thin-section petrography — and identified pegmatites as targets for **lithium, beryl and gemstones**, and fractured zones as potential aquifers.",
+      "Alongside geology, I've been freelancing in **software** since 2023: building web apps with Django, Flask, FastAPI, React and Next.js, deploying them with Docker, and working as an **IT technician** — installing systems, repairing hardware, setting up networks and recovering data.",
+      "Today I'm serving my NYSC year with the Department of Geology at **Modibbo Adama University, Yola**, supporting final-year research students and training my host community in digital skills — while taking on development and **GIS mapping** work on the side.",
     ],
   },
   principles: {
@@ -38,30 +37,30 @@ export const aboutConfig = {
       {
         title: "Observe first",
         description:
-          "Like logging an outcrop, I start by understanding the problem and the data before writing code.",
+          "Like logging an outcrop, I start by understanding the problem and the data before writing code or drawing a map.",
       },
       {
         title: "Ship, then refine",
         description:
-          "A working version beats a perfect plan. I iterate quickly based on real feedback.",
+          "A working version beats a perfect plan. I iterate quickly based on real feedback from clients.",
       },
       {
         title: "Sweat the details",
         description:
-          "Loading states, edge cases, and clear UX matter as much as the logic behind them.",
+          "Clear map layouts, loading states and edge cases matter as much as the logic behind them.",
       },
       {
-        title: "Build for people",
+        title: "Teach what I know",
         description:
-          "Technology is a means to an end. If it doesn't solve a real problem, it doesn't count.",
+          "Whether it's final-year students or a digital literacy class, sharing skills is part of the job.",
       },
     ],
   },
   beyond: {
     title: "Beyond the code",
     paragraphs: [
-      "When I'm not building software, I'm usually thinking about rocks, landscapes, and the processes that shaped them. Geology keeps me grounded — literally.",
-      "I'm always open to collaborating on interesting projects, especially ones that bring **software** and **science** together.",
+      "I'm a student member of the **Nigerian Mining and Geosciences Society (NMGS)** and the **Nigerian Association of Petroleum Explorationists (NAPE)**. My research interests are igneous and metamorphic petrology, structural geology, pegmatite mineralization, and **GIS and remote sensing** in geological mapping.",
+      "I speak English, Hausa and Taroh, and I'm always open to projects that bring **software** and **earth science** together.",
     ],
   },
   connectLinks: socialLinks,

@@ -21,7 +21,7 @@ export const projects: Project[] = [
     date: "11.2026",
     description:
       "E-commerce store for a Nigerian perfume, supplements and cosmetics brand — product collections, cart, wishlist, accounts, and a referral store-credit program.",
-    tech: ["HTML", "CSS", "Alpine.js", "Render"],
+    tech: ["Python", "Django", "Flask", "Alpine.js"],
     website: "https://de-saint.onrender.com/",
     featured: true,
     cover: "/assets/projects/de-saint.jpg",
@@ -33,11 +33,21 @@ export const projects: Project[] = [
     date: "11.2026",
     description:
       "Local delivery platform for a logistics company in Jos, Nigeria — book pickups on a map, get distance-based price estimates, and track parcels with live driver location.",
-    tech: ["JavaScript", "PWA", "Maps", "Render"],
+    tech: ["Python", "Django", "Flask", "JavaScript"],
     website: "https://gds-prime-logistics-2z1e.onrender.com/",
     featured: true,
     cover: "/assets/projects/gds-prime-logistics.jpg",
     gradient: "from-red-500/25 via-rose-500/15 to-orange-500/25",
+  },
+  {
+    slug: "wulmi-geological-mapping",
+    title: "Geological Mapping of Wulmi",
+    date: "2025",
+    description:
+      "B.Sc. project: independent 1:12,500 geological map of 14 km² of Basement Complex terrain near Pankshin, Plateau State, with structural analysis, thin-section petrography, and pegmatite (lithium, beryl, gemstone) targets.",
+    tech: ["QGIS", "ArcGIS Pro", "Surfer", "Field mapping"],
+    featured: true,
+    gradient: "from-stone-500/25 via-amber-500/15 to-emerald-500/25",
   },
   {
     slug: "portfolio",
@@ -47,7 +57,6 @@ export const projects: Project[] = [
       "This site — a personal portfolio built with Next.js, TypeScript, Tailwind CSS, and MDX.",
     tech: ["TypeScript", "Next.js", "Tailwind CSS"],
     href: "https://github.com/Kummep-jnr/Portfolio-",
-    featured: true,
     gradient: "from-amber-500/25 via-orange-500/15 to-stone-500/25",
   },
   {
@@ -58,7 +67,6 @@ export const projects: Project[] = [
     tech: ["TypeScript", "React"],
     href: "https://github.com/Kummep-jnr/Gblock",
     website: "https://gblock.vercel.app",
-    featured: true,
     gradient: "from-emerald-500/25 via-teal-500/15 to-cyan-500/25",
   },
   {
@@ -68,7 +76,6 @@ export const projects: Project[] = [
     description: "A Telegram bot written in Python.",
     tech: ["Python", "Telegram API"],
     href: "https://github.com/Kummep-jnr/BfileBot",
-    featured: true,
     gradient: "from-sky-500/25 via-blue-500/15 to-indigo-500/25",
   },
 ];

@@ -14,7 +14,7 @@ export const hasBlog = false;
 const optionalPages = [
   { label: "Work", href: "/work", visible: experience.length > 0 },
   { label: "Blog", href: "/blog", visible: hasBlog },
-  { label: "Resume", href: "/resume", visible: Boolean(resumeConfig.viewUrl) },
+  { label: "CV", href: "/resume", visible: resumeConfig.variants.length > 0 },
   { label: "Achievements", href: "/achievements", visible: achievements.length > 0 },
   { label: "Books", href: "/books", visible: books.length > 0 },
   {

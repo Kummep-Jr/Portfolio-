@@ -1,15 +1,14 @@
 export const heroConfig = {
   name: "Kummep Jnr",
-  // TODO: replace with the email you want visitors to use
-  email: "hello@example.com",
+  fullName: "Kummep Ringpon Timyil",
+  email: "ringpon123@gmail.com",
   // Optional booking link (e.g. cal.com). Leave empty to hide the "Book a call" button.
   calendarUrl: "",
-  bio: "Full-stack developer and geologist. I build clean, practical web apps and automation tools — and I bring a field scientist's patience for reading layers, finding patterns, and getting the details right.",
+  bio: "Full-stack developer, IT technician and geology graduate (University of Jos, 2025). I build web apps with Python and JavaScript, make GIS and geological maps, and bring a field geologist's eye for detail to everything I ship.",
   avatar: "/assets/avatar.png",
   avatarSmile: "/assets/avatar.png",
-  // TODO: set your IANA timezone (e.g. "Africa/Lagos") and location
-  timezone: "UTC",
-  location: "Earth",
+  timezone: "Africa/Lagos",
+  location: "Girei, Adamawa State, Nigeria",
 };
 
 export type SocialIcon = "x" | "linkedin" | "github" | "medium" | "mail" | "resume";
@@ -20,11 +19,19 @@ export const socialLinks: { name: string; href: string; icon: SocialIcon }[] = [
     href: "https://github.com/Kummep-jnr",
     icon: "github",
   },
-  // TODO: add LinkedIn / X / Medium here, e.g.
-  // { name: "LinkedIn", href: "https://www.linkedin.com/in/your-profile/", icon: "linkedin" },
+  {
+    name: "LinkedIn",
+    href: "https://www.linkedin.com/in/ringpon-kummep-969318403",
+    icon: "linkedin",
+  },
   {
     name: "Mail",
     href: `mailto:${heroConfig.email}`,
     icon: "mail",
+  },
+  {
+    name: "CV",
+    href: "/resume",
+    icon: "resume",
   },
 ];
