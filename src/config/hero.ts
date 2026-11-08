@@ -16,7 +16,7 @@ export type SocialIcon = "x" | "linkedin" | "github" | "medium" | "mail" | "resu
 export const socialLinks: { name: string; href: string; icon: SocialIcon }[] = [
   {
     name: "GitHub",
-    href: "https://github.com/Kummep-jnr",
+    href: "https://github.com/SmartDev911",
     icon: "github",
   },
   {

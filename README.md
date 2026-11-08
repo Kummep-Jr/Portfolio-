@@ -2,7 +2,7 @@
 
 Personal portfolio of **Kummep Jnr**, full-stack developer and geologist. Built with Next.js 15, TypeScript, Tailwind CSS v4, and MDX.
 
-**GitHub:** [@Kummep-jnr](https://github.com/Kummep-jnr)
+**GitHub:** [@SmartDev911](https://github.com/SmartDev911)
 
 ---
 

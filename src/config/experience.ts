@@ -50,9 +50,8 @@ export const experience: ExperienceItem[] = [
     company: "Freelance",
     role: "Cartographer & GIS Analyst",
     type: "Self-employed",
-    // TODO: add the year you started
-    periodShort: "Ongoing",
-    periodLong: "Ongoing",
+    periodShort: "2025 – Present",
+    periodLong: "2025 – Present",
     locationShort: "Remote, NG",
     locationLong: "Remote, Nigeria",
     working: true,
@@ -82,9 +81,8 @@ export const experience: ExperienceItem[] = [
     company: "Nigerian Geological Survey Agency (NGSA)",
     role: "Industrial Trainee (SIWES)",
     type: "Industrial training",
-    // TODO: add the months/years of your SIWES placement
-    periodShort: "SIWES",
-    periodLong: "SIWES placement",
+    periodShort: "2024",
+    periodLong: "2024",
     locationShort: "Jos, NG",
     locationLong: "Jos, Plateau State, Nigeria",
     details: [
