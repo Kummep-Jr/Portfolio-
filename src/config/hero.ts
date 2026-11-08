@@ -25,6 +25,11 @@ export const socialLinks: { name: string; href: string; icon: SocialIcon }[] = [
     icon: "linkedin",
   },
   {
+    name: "X",
+    href: "https://x.com/Smart_dev001",
+    icon: "x",
+  },
+  {
     name: "Mail",
     href: `mailto:${heroConfig.email}`,
     icon: "mail",

@@ -6,8 +6,7 @@ export const siteConfig = {
   // TODO: replace with your real domain once deployed
   url: "https://kummep-jnr.vercel.app",
   githubUsername: "SmartDev911",
-  // TODO: add your X/Twitter handle (e.g. "@yourhandle") or leave empty
-  twitterHandle: "",
+  twitterHandle: "@Smart_dev001",
   ogImage: "/assets/og-image.png",
   ogImageWidth: 1200,
   ogImageHeight: 630,
