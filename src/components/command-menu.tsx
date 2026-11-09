@@ -38,6 +38,10 @@ export function CommandMenu({ items: commandItems }: { items: CommandItem[] }) {
       window.open(href, "_blank", "noopener,noreferrer");
       return;
     }
+    if (href.startsWith("/keystatic")) {
+      window.location.assign(href);
+      return;
+    }
     router.push(href);
   };
 

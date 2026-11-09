@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { EnvelopeSimple, GithubLogo, LinkedinLogo, MediumLogo, XLogo } from "@phosphor-icons/react/dist/ssr";
+import { EnvelopeSimple, GithubLogo, LinkedinLogo, LockSimple, MediumLogo, XLogo } from "@phosphor-icons/react/dist/ssr";
 import { Container } from "@/components/container";
 import { siteConfig } from "@/config/meta";
 import { socialLinks } from "@/config/hero";
@@ -26,6 +26,16 @@ export function SiteFooter() {
         <div className="text-center font-mono text-sm text-secondary sm:text-left">
           <p>© {new Date().getFullYear()} {siteConfig.name}</p>
           <p className="mt-1">{siteConfig.footerTagline}</p>
+          {/* Plain <a>: the admin is a separate app, so load it as a full page */}
+          {/* eslint-disable-next-line @next/next/no-html-link-for-pages */}
+          <a
+            href="/keystatic"
+            rel="nofollow"
+            className="mt-2 inline-flex items-center gap-1 text-xs text-secondary/70 transition-colors hover:text-foreground"
+          >
+            <LockSimple className="size-3" />
+            Admin
+          </a>
         </div>
 
         <div className="flex flex-col items-center gap-4 sm:flex-row sm:gap-6">

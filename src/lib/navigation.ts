@@ -42,6 +42,7 @@ export async function getNavigation() {
     ...socialLinks
       .filter((link) => link.href.startsWith("http") || link.href.startsWith("mailto:"))
       .map((link) => ({ label: link.name, href: link.href, external: true })),
+    { label: "Admin", href: "/keystatic" },
   ];
   return { headerNav, moreNav, commandItems };
 }
